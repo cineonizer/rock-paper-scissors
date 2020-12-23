@@ -1,0 +1,1 @@
+In this project, I will make a rock paper scissors application using javascript basics.

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock Paper Scissors</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <script>
+            const winOutcomes = {
+                rock: 'scissors',
+                paper: 'rock',
+                scissors: 'paper'
+            }
+            function getPlayersChoice() {
+                let playersChoice = '';
+                while (playersChoice !== 'rock' && playersChoice !== 'paper' && playersChoice !== 'scissors') {
+                    playersChoice = prompt('Make your move: rock, paper, or scissors?').toLowerCase();
+                }
+                return playersChoice;
+            }
+            function getComputerChoice() {
+                let computersChoice = ['rock', 'paper', 'scissors'][Math.floor(Math.random() * 3)];
+                return computersChoice;
+            }
+            function playRound(playersChoice, computersChoice) {
+                if (playersChoice === computersChoice) {
+                    alert('Draw.');
+                }
+                else if (winOutcomes[playersChoice] === computersChoice) {
+                    alert('You win!');
+                }
+                else {
+                    alert('You lose.');
+                }
+            }
+            playRound(getPlayersChoice(), getComputerChoice());
+        </script>
+    </body>
+</html>
