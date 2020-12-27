@@ -14,10 +14,10 @@
             let playerScore = 0;
             let computerScore = 0;
             function getPlayerChoice() {
-                let playerChoice = '';
-                while (playerChoice !== 'rock' && playerChoice !== 'paper' && playerChoice !== 'scissors') {
+                let playerChoice;
+                do {
                     playerChoice = prompt('Make your move: rock, paper, or scissors?').toLowerCase();
-                }
+                } while (playerChoice !== 'rock' && playerChoice !== 'paper' && playerChoice !== 'scissors');
                 return playerChoice;
             }
             function getComputerChoice() {
@@ -39,10 +39,10 @@
                 }
             }
             function playGame() {
-                let numberOfRounds = 0;
-                while (numberOfRounds < 1 || isNaN(numberOfRounds)) {
+                let numberOfRounds;
+                do {
                     numberOfRounds = prompt('How many rounds you want to play?', 1);
-                }
+                } while (numberOfRounds < 1 || isNaN(numberOfRounds));
                 for (let i = 0; i < numberOfRounds; i++) {
                     playRound(getPlayerChoice(), getComputerChoice());
                 }
