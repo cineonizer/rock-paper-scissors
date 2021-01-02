@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'arctik4';
+    src: url('fonts/arctik4.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* @media (min-width: 1000px) {
+    .player-container {
+        width: 300px;
+    }
+} */
+
+body {
+    background-color: #003087;
+    color: #FFFFFF;
+    font-family: arctik4;
+}
+
+h1 {
+    font-size: 5em;
+    margin: 25px, 50px;
+    text-align: center;
+}
+
+.player-container {
+    text-align: center;
+    margin: 0 300px;
+    border: solid 5px;
+    padding: 30px 30px 0px;
+    width: 300px;
+    max-width: 300px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-content: baseline;
+}
+
+.header h2 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 15px;
+}
+
+.score-container h2 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 15px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 10px;
+}
+
+.buttons-container h4 {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    bottom: 15px;
+}
+
+.buttons-container img {
+    border: 5px solid transparent;
+    transition:.15s ease-in;
+    -o-transition:.15s ease-in;
+    -ms-transition:.15s ease-in;
+    -moz-transition:.15s ease-in;
+    -webkit-transition: .15s ease-in;
+}
+
+.rock-button:hover img{
+    border: 5px solid #F44D3A;
+    border-radius: 100px;
+    box-shadow: inset 0 0 0 50px #F44D3A;
+}
+
+.paper-button:hover img {
+    border: 5px solid #CE84B5;
+    border-radius: 100px;
+    box-shadow: inset 0 0 0 50px #CE84B5;
+}
+
+.scissors-button:hover img {
+    border: 5px solid #19B190;
+    border-radius: 100px;
+    box-shadow: inset 0 0 0 50px #19B190;
+}
+
+
+
