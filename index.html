@@ -1,39 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Rock Paper Scissors</title>
+        <title>R•P•S</title>
         <meta charset="UTF-8"/>
         <link href="styles.css" rel="stylesheet">
+        <script src="script.js" defer></script>
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     </head>
-
     <body>
-        <h1>ROCK, PAPER, OR SCISSORS?</h1>
-        <div class="player-container">
-            <div class="header-container">
-                <div class="profile-container">
-                    <img src="images/player.png" height="50px"/>
-                    <h2>You</h2>
+        <audio id="button-sound" src="sounds/button-sound.mp3"></audio>
+        <audio id="winner-sound" src="sounds/winsound.mp3"></audio>
+        <audio id="lose-sound" src="sounds/losesound.mp3"></audio>
+        <h1>ROCK, PAPER, SCISSORS</h1>
+        <h2>First to 5 wins</h2>
+        <div class="main-container">
+            <div class="player-container">
+                <div class="header-container">
+                    <div class="profile-container">
+                        <img src="images/player.png" height="50px"/>
+                        <h2>You</h2>
+                    </div>
+                    <div class="score-container">
+                        <img src="images/score.png" height="50px"/>
+                        <h2 id="player-score">0</h2>
+                    </div>
                 </div>
-                <div class="score-container">
-                    <img src="images/score.png" height="50px"/>
-                    <h2>0</h2>
+                <div class="buttons-container">
+                    <div id= "player-rock-button" data-button="rock">
+                        <img src="images/rock.png" height="50px"/>
+                        <h4>Rock</h4>
+                    </div>
+                    <div id= "player-paper-button" data-button="paper">
+                        <img src="images/paper.png" height="50px"/>
+                        <h4>Paper</h4>
+                    </div>
+                    <div id= "player-scissors-button" data-button="scissors">
+                        <img src="images/scissors.png" height="50px"/>
+                        <h4>Scissors</h4>
+                    </div>
                 </div>
             </div>
+            <div class="player-container">
+                <div class="header-container">
+                    <div class="profile-container">
+                        <img src="images/bot.png" height="50px"/>
+                        <h2>Bot</h2>
+                    </div>
+                    <div class="score-container">
+                        <img src="images/score.png" height="50px"/>
+                        <h2 id="computer-score">0</h2>
+                    </div>
+                </div>
+                <div class="buttons-container">
+                    <div id="computer-rock-button">
+                        <img src="images/rock.png" height="50px"/>
+                        <h4>Rock</h4>
+                    </div>
+                    <div id="computer-paper-button">
+                        <img src="images/paper.png" height="50px"/>
+                        <h4>Paper</h4>
+                    </div>
+                    <div id="computer-scissors-button">
+                        <img src="images/scissors.png" height="50px"/>
+                        <h4>Scissors</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="round-announcement-container">
+            <h3></h3>
+        </div>
+        <div class="winner-container">
+            <div id="player-wins">
+                <img src="images/trophy.png" height="75px"/>
+                <h2>You win!</h2>
+            </div>
+            <div id="computer-wins">
+                <h2>Bot wins.</h2>
+            </div>
             <div class="buttons-container">
-                <div class="rock-button" data-button="rock">
-                    <img src="images/rock.png" height="50px"/>
-                    <h4>Rock</h4>
-                </div>
-                <div class="paper-button" data-button="paper">
-                    <img src="images/paper.png" height="50px"/>
-                    <h4>Paper</h4>
-                </div>
-                <div class="scissors-button" data-button="scissors">
-                    <img src="images/scissors.png" height="50px"/>
-                    <h4>Scissors</h4>
+                <div id="start-button">
+                    <img src="images/play.png" height="50px"/>
+                    <h4>Start</h4>
                 </div>
             </div>
         </div>
     </body>
-
 </html>

@@ -5,16 +5,13 @@
     font-style: normal;
 }
 
-/* @media (min-width: 1000px) {
-    .player-container {
-        width: 300px;
-    }
-} */
-
 body {
     background-color: #003087;
     color: #FFFFFF;
     font-family: arctik4;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 h1 {
@@ -23,9 +20,22 @@ h1 {
     text-align: center;
 }
 
-.player-container {
+h2 {
+    font-size: 2em;
     text-align: center;
-    margin: 0 300px;
+    position: relative;
+    bottom: 50px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    max-width: 1000px;
+}
+
+.player-container {
+    margin: auto;
     border: solid 5px;
     padding: 30px 30px 0px;
     width: 300px;
@@ -38,7 +48,7 @@ h1 {
     align-content: baseline;
 }
 
-.header h2 {
+.header-container h2 {
     display: flex;
     justify-content: center;
     position: relative;
@@ -69,29 +79,101 @@ h1 {
 .buttons-container img {
     border: 5px solid transparent;
     transition:.15s ease-in;
-    -o-transition:.15s ease-in;
-    -ms-transition:.15s ease-in;
     -moz-transition:.15s ease-in;
     -webkit-transition: .15s ease-in;
 }
 
-.rock-button:hover img{
+#player-rock-button:hover img{
     border: 5px solid #F44D3A;
     border-radius: 100px;
-    box-shadow: inset 0 0 0 50px #F44D3A;
+    box-shadow: inset 50px 50px #F44D3A;
+    cursor: pointer;
 }
 
-.paper-button:hover img {
+#player-paper-button:hover img {
     border: 5px solid #CE84B5;
     border-radius: 100px;
-    box-shadow: inset 0 0 0 50px #CE84B5;
+    box-shadow: inset 50px 50px #CE84B5;
+    cursor: pointer;
 }
 
-.scissors-button:hover img {
+#player-scissors-button:hover img {
     border: 5px solid #19B190;
     border-radius: 100px;
-    box-shadow: inset 0 0 0 50px #19B190;
+    box-shadow: inset 50px 50px #19B190;
+    cursor: pointer;
 }
 
+.rock-button-selected img {
+    border: 5px solid #F44D3A;
+    border-radius: 100px;
+    box-shadow: inset 50px 50px #F44D3A;
+}
 
+.paper-button-selected img {
+    border: 5px solid #CE84B5;
+    border-radius: 100px;
+    box-shadow: inset 50px 50px #CE84B5;
+}
 
+.scissors-button-selected img {
+    border: 5px solid #19B190;
+    border-radius: 100px;
+    box-shadow: inset 50px 50px #19B190;
+}
+
+.round-announcement-container {
+    margin-top: 2em;
+    font-size: 2em;
+    text-align: center;
+}
+
+.winner-container {
+    display: grid;
+}
+
+.winner-container #player-wins {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 150px auto;
+    text-align: center;
+    max-width: 200px;
+    max-height: 60px;
+    opacity: 0;
+    transition: opacity .75s;
+    -webkit-transition: opacity .75s;
+    -moz-transition: opacity .75s;
+}
+
+.winner-container #computer-wins {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 230px auto;
+    max-width: 200px;
+    max-height: 60px;
+    opacity: 0;
+    transition: opacity .75s;
+    -webkit-transition: opacity .75s;
+    -moz-transition: opacity .75s;
+}
+
+.winner-container h2 {
+    font-size: 2.5em;
+    bottom: 40px;
+}
+
+#start-button {
+    position: relative;
+    bottom: 250px;
+    opacity: 0;
+    transition: opacity .75s;
+    -webkit-transition: opacity .75s;
+    -moz-transition: opacity .75s;
+}
+
+#start-button:hover img {
+    border: 5px solid #899AC8;
+    border-radius: 100px;
+    box-shadow: inset 50px 50px #899AC8;
+    cursor: pointer;
+}

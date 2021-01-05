@@ -1,1 +1,1 @@
-In this project, I will make a rock paper scissors application using javascript basics.
+A simple game of rock, paper, scissors using HTML, CSS, and JavaScript from [The Odin Project's Foundation Path](https://www.theodinproject.com/courses/foundations/lessons/rock-paper-scissors).
