@@ -1,6 +1,6 @@
 # Rock, Paper, Scissors
 
-This is a project from the curriculum of [The Odin Project's Foundation Path](https://www.theodinproject.com/courses/foundations/lessons/rock-paper-scissors).
+This is the [Rock Paper Scissors](https://www.theodinproject.com/courses/foundations/lessons/rock-paper-scissors) project from the curriculum of [The Odin Project's Foundation Path](https://www.theodinproject.com/paths/foundations/courses/foundations).
 
 #### What is The Odin Project?
 
