@@ -22,7 +22,7 @@ Create an implementation of the game rock, paper, scissors.
 
 ## Learning Outcomes
 
-* Got a better understanding of the basic syntatical nature of JavaScript.
+* Got a better understanding of the basic syntactical nature of JavaScript.
 * Practiced more structure in HTML and styling in CSS.
 * Learned about the DOM, DOM manipulation, and DOM methods.
 * Familiarized myself with the Chrome developer tools.
